@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-//Test kommentar - licht & math
+//Test kommentar - licht & math - test 2
 public class Main extends Application {
 
     @Override
