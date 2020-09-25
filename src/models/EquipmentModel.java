@@ -40,7 +40,7 @@ public class EquipmentModel {
         this.needsRepair = needsRepair;
     }
 
-    public String toString() {
-        return "EquipmentModel{" + "id: " + id + " type: " + type + " needs repair: " + needsRepair + "}";
+    public String readEquipment(){
+        return id + " " + type + " " + needsRepair;
     }
 }

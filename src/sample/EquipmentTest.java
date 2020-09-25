@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ReadEquipTest {
+class EquipmentTest {
 
     private Object EquipmentModel;
 
@@ -37,35 +37,27 @@ class ReadEquipTest {
         equipment.add(new EquipmentModel("gk4", "Gokart", false ));
         return equipment.get(0);
     }
-    // Sidste
-    @Test
-    public void testRead() {
-        ArrayList<models.EquipmentModel> equipment1 = new ArrayList<>();
-        equipment1.add(new EquipmentModel("gk1", "Gokart", false ));
-        equipment1.add(new EquipmentModel("gk2", "Gokart", false ));
-        equipment1.add(new EquipmentModel("gk3", "Gokart", false ));
-        equipment1.add(new EquipmentModel("gk4", "Gokart", false ));
-
-        ReadEquip readEquip = new ReadEquip();
-        Object actual = equipment1;
-        Object expected = readEquip.readEquipment(equipment1);
-
-        assertEquals(actual, expected);
-
-    }
-
 
     @Test
     public List readEquip(List<EquipmentModel> em)  {
             em.add(new EquipmentModel("gk1", "Gokart", false ));
             List actual = em;
 
-        ReadEquipTest readEquipTest = new ReadEquipTest();
+        EquipmentTest readEquipTest = new EquipmentTest();
             List result = readEquipTest.readEquip(em);
             assertEquals(actual, result);
 
 
         return em;
+    }
+
+    @Test
+    public void readEquipment123(){
+        EquipmentModel eqip = new EquipmentModel("1","sumo",true);
+        String expected = "1" + " " + "sumo" + " " + "true";
+        String actual = eqip.readEquipment();
+
+        assertEquals(expected,actual);
     }
 
 }
