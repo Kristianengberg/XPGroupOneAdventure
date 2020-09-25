@@ -39,4 +39,8 @@ public class EquipmentModel {
     public void setNeedsRepair(boolean needsRepair) {
         this.needsRepair = needsRepair;
     }
+
+    public String toString() {
+        return "EquipmentModel{" + "id: " + id + " type: " + type + " needs repair: " + needsRepair + "}";
+    }
 }
